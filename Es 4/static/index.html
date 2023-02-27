@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8"/>
+    <!--Link per BootStrap-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  	<script type="text/javascript" src="js/libreria.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body>
+    <!-- sezione di login -->
+    <div class="container-fluid" id="loginForm">
+		<h1 align="center" style="padding:15px; padding-bottom:35px;">Login Page</h1>
+		<form name="form1">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"> </i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Inserire username" name="username" id="txtUser" required value="mauro">
+					</div>
+					<div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"> </i>
+                        </span>
+                        <input class="form-control" placeholder="Inserire password" name="password" id="txtPwd" type="password" required value="mauro">
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+			
+			<!--pulsante Login-->
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 form-group">
+                    <button type="button" id="btnLogin" class="btn btn-primary btn-block">Login</button>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+            <!--pulsante Register-->
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 form-group">
+                    <button type="button" id="btnReg" class="btn btn-primary btn-block">Register</button>
+                </div>
+                <div class="col-sm-4"></div>
+			</div>
+		</form>		
+    </div>  
+
+    <!-- sezione register -->
+    <div class="container-fluid" id="regForm">
+		<h1 align="center" style="padding:15px; padding-bottom:35px;">Register Form</h1>
+		<form name="form1">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"> </i>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Inserire username" name="username" id="txtUserReg" required>
+					</div>
+					<div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"> </i>
+                        </span>
+                        <input class="form-control" placeholder="Inserire password" name="password" id="txtPwdReg" type="password" required>
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"> </i>
+                        </span>
+                        <input class="form-control" placeholder="Inserire cognome" name="cognome" id="txtCognome" type="text" required>
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"> </i>
+                        </span>
+                        <input class="form-control" placeholder="Inserire nome" name="nome" id="txtNome" type="text" required>
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-envelope"> </i>
+                        </span>
+                        <input class="form-control" placeholder="Inserire mail" name="mail" id="txtMail" type="email" required>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+			
+			<!--pulsante Login-->
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 form-group">
+                    <button type="button" id="btnRegistraDati" class="btn btn-primary btn-block">Registra utente</button>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+            <!--pulsante Register-->
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 form-group">
+                    <button type="button" id="btnAnnulla" class="btn btn-warning btn-block">Annulla</button>
+                </div>
+                <div class="col-sm-4"></div>
+			</div>
+			<div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4 form-group">
+                    <div class="alert alert-success" role="alert" id="alertRegOk">
+                        Utente registrato correttamente. E' ora possibile eseguire il login.
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+		</form>		
+    </div>  
+
+    <div class="container-fluid" id="mainForm">
+        <h1 align="center" style="padding:15px; padding-bottom:35px;">Roster giocatori</h1>
+                        
+        <!-- elenco giocatori-->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 form-group">
+                <table class="table table-hover" style="background-color:#DFD;">
+                <thead>
+                    <tr>
+                    <th>Nome</th>
+                    <th>Punti</th>
+                    <th>Squadra</th>
+                    <th>Età</th>
+                    <th>Conference</th>
+                    <th>Ruolo</th>
+                </tr>
+                </thead>
+                <tbody id="tbodyRoster">
+
+                </tbody>
+                </table>
+                <button type="button" id="btnLogout" class="btn btn-warning btn-block">Logout</button>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div> <!-- end container -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 alert alert-success alert-dismissible" id="pError"></div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</body>
+</html>

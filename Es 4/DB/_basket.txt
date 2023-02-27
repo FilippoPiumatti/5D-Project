@@ -1,0 +1,11 @@
+{"_id":1, "nome":"Rodman",  "punti":234, "squadra":"Bulls", "eta":26, "conference":"est", "ruolo":["centro", "ala grande"]}
+{"_id":2, "nome":"Jordan",  "punti":4234, "squadra":"Bulls", "eta":29, "conference":"est", "ruolo":["play", "guardia", "ala piccola"]}
+{"_id":3, "nome":"Bird",  "punti":3321, "squadra":"Celtics", "eta":30, "conference":"ovest", "ruolo":["ala piccola", "ala grande"]}
+{"_id":4, "nome":"Johnson",  "punti":2984, "squadra":"Lakers", "eta":32, "conference":"est", "ruolo":["ala grande"]}
+{"_id":5, "nome":"Mutombo",  "punti":1238, "squadra":"Rockets", "eta":27, "conference":"ovest", "ruolo":["centro"]}
+{"_id":6, "nome":"Oneal",  "punti":3278, "squadra":"Lakers", "eta":37, "conference":"est", "ruolo":["centro", "ala grande"]}
+{"_id":7, "nome":"Iverson",  "punti":2547, "squadra":"Celtics", "eta":30, "conference":"ovest", "ruolo":["play", "guardia"]}
+{"_id":8, "nome":"Drexler",  "punti":3120, "squadra":"Rockets", "eta":27, "conference":"ovest", "ruolo":["ala piccola", "ala grande"]}
+{"_id":9, "nome":"Durant",  "punti":1893, "squadra":"Bulls", "eta":21, "conference":"est", "ruolo":["guardia", "play"]}
+{"_id":10, "nome":"Bryant",  "punti":4089, "squadra":"Lakers", "eta":27, "conference":"est", "ruolo":["ala piccola", "play"]}
+{"_id":11, "nome":"James",  "punti":3245, "squadra":"Lakers", "eta":19, "conference":"est", "ruolo":["ala grande"]}
